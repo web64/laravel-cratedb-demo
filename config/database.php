@@ -33,6 +33,13 @@ return [
 
     'connections' => [
 
+        'crate' => array(
+            'driver'   => 'crate',
+            'host'     => env('CRATEDB_HOST', 'localhost'),
+            'database' => env('CRATEDB_DATABASE', 'laravelapp'),
+            'port'     => env('CRATEDB_PORT', 4200),
+        ),
+
         'sqlite' => [
             'driver' => 'sqlite',
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
